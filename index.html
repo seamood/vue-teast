@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,minimal-ui"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="x-rim-auto-match" content="none"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Expires" content="Tue, 01 Jan 1990 1:00:00 GMT">
+    <title>产前筛查</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+    <script>
+
+      // if (/(com.meitu)/gi.test(navigator.userAgent)) document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />');
+      // else if (!/iPhone|iPad/ig.test(navigator.userAgent)) document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,target-densitydpi=device-dpi" />');
+      // else document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />')
+
+      window.onresize = function () {
+        var w = window.innerWidth || document.documentElement.offsetWidth || document.body.offsetWidth;
+        var h = window.innerHeight || document.documentElement.offsetHeight || document.body.offsetHeight;;
+        w = w < h ? w : h;
+        //let d = w<h?(750 / 100):(1100 / 100);
+        let d = 750 / 100;
+        var fontSize = w / d;
+
+        document.documentElement.style.fontSize = fontSize + 'px';
+
+        coverImg();
+
+      };
+      window.onresize();
+      // 等比缩放图片
+      function coverImg(item, box) {
+        var w, h;
+        if (box) {
+          w = box.innerWidth || box.offsetWidth || box.scrollWidth;
+          h = box.innerHeight || box.offsetHeight || box.scrollHeight;
+        }
+        else {
+          w = window.innerWidth || document.documentElement.clientWidth || document.body.offsetWidth;
+          h = window.innerHeight || document.documentElement.clientHeight || document.body.offsetHeight;
+        }
+
+        let coverImg = item ? [item] : document.getElementsByClassName("coverImg");
+        for (let i = 0; i < coverImg.length; i++) {
+          let item = coverImg[i];
+          let iW = item.offsetWidth;
+          let iH = item.offsetHeight || item.scrollHeight;
+
+          let r = false;
+          if (iH >= h && iW <= w) {
+            r = true;
+          } else if (iH <= h && iW >= w) {
+            r = false;
+          }
+
+          if (r) {
+            item.style.height = "100%";
+            item.style.width = "auto";
+          } else {
+            item.style.width = "100%";
+            item.style.height = "auto";
+          }
+        }
+      }
+      window.coverImg = coverImg;
+
+          </script>
+  </body>
+</html>
