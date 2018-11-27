@@ -1,0 +1,196 @@
+*{
+  margin:0;
+  padding:0;
+}
+.index{
+  width:100%;
+  height:auto;
+  // background: rgb(221, 220, 220);
+  position: relative;
+  left:0;
+  &__nav{
+    width:100%;
+    height:.9rem;
+    line-height: .9rem;
+    font-size: .35rem;
+    color:rgb(157, 15, 69);
+    background: -webkit-linear-gradient(rgb(246, 151, 139), rgb(246, 201, 192));
+    background: -o-linear-gradient(rgb(246, 151, 139), rgb(246, 201, 192));
+    background: -moz-linear-gradient(rgb(246, 151, 139), rgb(246, 201, 192));
+    background: linear-gradient(rgb(246, 151, 139), rgb(246, 201, 192));
+    text-align: center;
+    img{
+      width:.4rem;
+      height:.5rem;
+      position: absolute;
+      left:7%;
+      top:.2rem;
+    }
+  }
+  &__title{
+    width:100%;
+    height:1rem;
+    // background: pink;
+    img{
+      width:.7rem;
+      height:.7rem;
+      position: relative;
+      left:1.4rem;
+      top:-.06rem;
+    }
+    span{
+      width:55%;
+      height:1rem;
+      // background: red;
+      display: inline-block;
+      line-height: 1rem;
+      // text-align: center;
+      position: relative;
+      left:1.2rem;
+      top:-.3rem;
+      font-size: .35rem;
+      font-weight: bold;
+    }
+  }
+  &__content{
+    width:100%;
+    height:1rem;
+    // background: pink;
+    position: relative;
+    span{
+      width:20%;
+      height:1rem;
+      line-height: 1rem;
+      font-size: .3rem;
+      position: relative;
+      left:.35rem;
+      top:-.3rem;
+    }
+    input{
+      width:65%;
+      height:.75rem;
+      position: relative;
+      top:-.3rem;
+      left:.1rem;
+      font-size: .3rem;
+      border-radius: .2rem;
+      border:1px solid rgb(246, 151, 139);
+      // border:none;
+      outline: 0;
+      padding: 0 0 0 .2rem;
+    }
+  }
+  &__btn{
+    width:100%;
+    height:1rem;
+    // background: green;
+    position: relative;
+    top:.2rem;
+    button{
+      width:52%;
+      height:.9rem;
+      line-height: .9rem;
+      position: absolute;
+      left:24%;
+      top:.05rem;
+      border-radius: .2rem;
+      border:none;
+      outline: 0;
+      font-size: .35rem;
+      color:white;
+      background: rgb(224, 115, 101);
+      &:disabled{
+        background: gray
+      }
+    }
+  }
+  &__notice{
+    width:94%;
+    height:1rem;
+    position: relative;
+    top:.35rem;
+    left:3%;
+    // background: pink;
+    font-size: .23rem;
+  }
+  &__explain{
+    width:94%;
+    height:auto;
+    // background: teal;
+    position: relative;
+    top:.35rem;
+    left:3%;
+    font-size: .26rem;
+    p{
+      width:100%;
+      height:.4rem;
+      line-height: .4rem;
+    }
+    span{
+      width:100%;
+      height:.3rem;
+      line-height: .3rem;
+      display: inline-block;
+      margin:.08rem 0 .08rem 0;
+    }
+  }
+  &__result{
+    width:100%;
+    height:1rem;
+    // background: rgb(221, 220, 220);
+    position: relative;
+    top:.6rem;
+    .div{
+      img{
+        width:.6rem;
+        height:.6rem;
+        position: relative;
+        left:.3rem;
+        top:-.1rem;
+      }
+      span{
+        width:60%;
+        height:1rem;
+        line-height: 1rem;
+        position: relative;
+        top:-.3rem;
+        // background: red;
+        display: inline-block;
+        font-size: .35rem;
+        font-weight: bold;
+      }
+    }
+    .p1{
+      width:100%;
+      height:.5rem;
+      line-height: .5rem;
+      text-align: center;
+      // background: red;
+      font-size: .25rem;
+      position: relative;
+      top:-.15rem;
+    }
+    .p2{
+      width:100%;
+      height:.6rem;
+      line-height: .6rem;
+      text-align: center;
+      // background: red;
+      font-size: .33rem;
+      position: relative;
+      // top:-.15rem;
+    }
+  }
+  footer{
+    width:100%;
+    height:1.3rem;
+    position: fixed;
+    bottom:0;
+    background: -webkit-linear-gradient(rgb(246, 201, 192),rgb(246, 151, 139));
+    background: -o-linear-gradient(rgb(246, 201, 192),rgb(246, 151, 139));
+    background: -moz-linear-gradient(rgb(246, 201, 192),rgb(246, 151, 139));
+    background: linear-gradient(rgb(246, 201, 192),rgb(246, 151, 139));
+    text-align: center;
+    font-size: .22rem;
+  }
+}

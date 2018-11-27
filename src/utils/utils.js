@@ -31,7 +31,7 @@ export default async (type = 'GET', url = '', data = {}, baseUrl = 'api') => {
     })
     Object.defineProperty(requestConfig, 'body', {
       // value: JSON.stringify(data) // 转为json字符串
-      value: value.join('&')   // 转为key-value
+      value: value.join('&')
     })
   }
   try {
